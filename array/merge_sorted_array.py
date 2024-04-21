@@ -1,7 +1,7 @@
 # merged array should be sorted
-# array 1 - [1, 3, 5, 7, 9]
-# array 2 - [2, 4, 6, 8, 10]
-# final array - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# array 1 - [1, 2, 3, 5, 7, 9] i
+# array 2 - [4, 6, 8, 10] j
+# final array - [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] k
 
 # array 1 - [12]
 # array 2 - [1 3 6 7 8 9 10]

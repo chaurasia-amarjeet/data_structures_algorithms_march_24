@@ -1,5 +1,5 @@
 def merge(arr, p, q, r):
-    # p=0, q=2, r=4
+    # p=0, q=2, r=5 [1, 4, 3]    [6, 8, 9]
     n1 = q - p + 1
     n2 = r - q
 
@@ -42,9 +42,18 @@ def merge(arr, p, q, r):
         k += 1
 
 
-def merge_sort(arr, p, r):
+def merge_sort(arr, p, r):   #1024  p = 512, r = 1023
     if p < r:
-        q = p + (r - p) // 2
+        q = p + (r - p) // 2 # to prevent overflow int - 4 byte  (p + r) // 2
+        #[1, 4, 3, 6, 8]
+        #[1, 4, 3]  [6, 8]
+        #[1,4] [3] [6,8]
+        #[1] [4] [3] [6, 8]
+        #[1, 4] [3] [6, 8]
+        # [1, 3, 4]  [6, 8]
+        # [1, 3, 4]  [6] [8]
+        # [1, 3, 4]  [6, 8]
+        # [1, 3, 4, 6, 8]
 
         merge_sort(arr, p, q)
         merge_sort(arr, q + 1, r)
